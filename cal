@@ -1,0 +1,67 @@
+import math
+
+caltype=input("To normal calculator-> n, to scintific calculator->s: ")
+
+if(caltype=='n'):
+    x=int(input("Enter the number 1:"))
+    y=int(input("Enter the number 2: "))
+    operation=input("Enter the operation '+,-,*,/': ")
+    if(operation=='+'):
+        answer= x+y
+        print("Answer: ",answer)
+    elif(operation=='-'):
+        answer=x-y
+        print("Answer: ",answer)
+    elif(operation=='*'):
+        answer=x*y
+        print("Answer: ",answer)
+    else:
+        answer=x/y
+        print("Answer: ",round(answer,2))
+else:
+    print("To find => Factorial-> f, Trignometric-> t, Square root-> s, Power of the number-> p, Logrithamic value-> l, Natural Logrithamic value-> n")
+    operation=input("Enter the operation: ")
+    if(operation=='f'):
+        value=int(input("Enter the value:"))
+        answer=math.factorial(value)
+        print("Answer: ",answer)
+         
+    elif(operation=='t'):
+        value=int(input("Enter the value:"))
+        types=input("Enter the type=> sin-> s, cos-> c, tan-> t: ")
+        #need to edit
+        if(types=='s'):
+            answer=math.sin(value)
+            print("Answer: ",answer)
+            
+        elif(types=='c'):
+            answer=math.cos(value)
+            print("Answer: ",answer)
+            
+        else:
+            answer=math.tan(value)
+            print("Answer: ",answer)
+        
+    elif(operation=='s'):
+        value=int(input("Enter the value:"))
+        answer=math.sqrt(value)
+        print("Answer: ",answer)
+        
+    elif(operation=='l'):
+        value=int(input("Enter the value:"))
+        base=int(input("Enter the base:"))
+        answer=math.log(value,base)
+        print("Answer: ",answer)
+        
+    elif(operation=='p'):
+        value=int(input("Enter the value:"))
+        power=int(input("Enter the power:"))
+        answer=math.pow(value,power)
+        print("Answer: ",answer)
+         
+    else:
+        value=int(input("Enter the value:"))
+        answer=math.log(value)
+        print("Answer: ",answer)
+
+
